@@ -7,8 +7,7 @@ const app = express()
 const routes = require('./routes/index')
 
 //routes
-app.use('/', routes) 
-app.use((req, res) => {res.status(404).json({message: "NOT A PROPER ROUTE"})})
+app.use('/', routes) //check the routes index.js for ALL routes so we save space on server.js
 
 //listener
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`))
