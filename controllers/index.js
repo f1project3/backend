@@ -1,9 +1,9 @@
 module.exports = {
-    teamCtrl: require('./peopleCtrls'), //exports all functions/methods inside the controller for us to use elsewhere, easier
+    teamCtrl: require('./peopleCtrls'), 
 }
 module.exports = {
-    playerCtrl: require('./peopleCtrls'), //exports all functions/methods inside the controller for us to use elsewhere, easier
+    playerCtrl: require('./peopleCtrls'), 
 }
 module.exports = {
-    statsCtrl: require('./peopleCtrls'), //exports all functions/methods inside the controller for us to use elsewhere, easier
+    statsCtrl: require('./peopleCtrls'), 
 }

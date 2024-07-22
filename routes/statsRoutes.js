@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { statsCtrl } = require('../controllers') //all functions/methods imported from people's controller's index.js
+const { statsCtrl } = require('../controllers') 
 
-// ROUTES - METHODS //
+
 router.get('/', statsCtrl.getStats)
 router.post('/', statsCtrl.createStats)
 

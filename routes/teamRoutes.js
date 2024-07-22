@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { teamCtrl } = require('../controllers') //all functions/methods imported from people's controller's index.js
+const { teamCtrl } = require('../controllers') 
 
-// ROUTES - METHODS //
 router.get('/', teamCtrl.getTeam)
 router.post('/', teamCtrl.createTeam)
 
