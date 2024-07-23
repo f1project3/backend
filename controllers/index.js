@@ -1,9 +1,11 @@
 module.exports = {
-    teamCtrl: require('./peopleCtrls'), 
+    teamCtrl: require('./teamCtrls'),
+    playerCtrl: require('./playerCtrls'),
+    statsCtrl: require('./statsCtrls')
 }
-module.exports = {
-    playerCtrl: require('./peopleCtrls'), 
-}
-module.exports = {
-    statsCtrl: require('./peopleCtrls'), 
-}
+
+console.log('ctrls working:',
+     {teamCtrl: require('./teamCtrls'),
+     playerCtrl: require('./playerCtrls'),
+     statsCtrl: require('./playerCtrls'),
+     })

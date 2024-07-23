@@ -2,12 +2,12 @@ const db = require('../models')
 
 const getStats = (req, res) => {
    
-    res.send('getPeople')
+    res.send('getStats')
 }
 
 const createStats = (req, res) => {
 
-    res.send('createPeople')
+    res.send('createStats')
 }
 
 module.exports = {

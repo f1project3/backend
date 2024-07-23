@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { statsCtrl } = require('../controllers') 
+const { statsCtrl } = require('../controllers/index') 
 
 
 router.get('/', statsCtrl.getStats)
