@@ -12,3 +12,7 @@ async function connectToMongo() {
 }
 
 connectToMongo();
+
+module.exports = {
+  Team: require('./Team')
+}
