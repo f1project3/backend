@@ -22,8 +22,33 @@ const createTeam = (req, res) => {
     })
 }
 
+const updateTeam = (req,res) => {
+    db.Team.findByIdAndUpdate(req.params.id, req.body, {new: true}). then((updatedTeam => {
+        if(!updatedTeam){
+            res.status(400).json({Message: 'Could not update Team'})
+
+        }else {
+            res.status(200).json({Data: updatedTeam, Message: "Team updated"})
+
+        }
+    }))
+}
+
+const deleteTeam = (req,res) => {
+    db.Team.findByIdAndDelete(req.params.id)
+    .then((deletedTeam => {
+        if(!deletedTeam){
+            res.status(400).json({Message: 'Could not delete Team'})
+
+        } else {
+            res.status(200).json({Data: deletedTeam, Message: "Team deleted"})   
+        }
+    }))
+}
 module.exports = {
     getTeam, 
-    createTeam
+    createTeam,
+    updateTeam,
+    deleteTeam
 }
 
