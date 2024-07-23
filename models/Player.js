@@ -7,6 +7,6 @@ const PlayerSchema = new mongoose.Schema({
     description: String
 })
 
-const Team = mongoose.model('Team', PlayerSchema )
+const Player = mongoose.model('Player', PlayerSchema )
 
-module.exports = Team
+module.exports = Player

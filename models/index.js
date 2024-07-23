@@ -14,5 +14,8 @@ async function connectToMongo() {
 connectToMongo();
 
 module.exports = {
-  Team: require('./Team')
+  Team: require('./Team'),
+  Player: require('./Player'),
+  Stats: require('./Stats'),
 }
+
