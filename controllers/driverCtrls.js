@@ -1,7 +1,7 @@
 const db = require("../models");
 
 const getDriver = (req, res) => {
-  db.driver.find({}).then((founddriver) => {
+  db.Driver.find({}).then((founddriver) => {
     if (!founddriver) {
       res.status(404).json({ message: "Cannot find driver" });
     } else {
@@ -11,7 +11,7 @@ const getDriver = (req, res) => {
 };
 
 const createDriver = (req, res) => {
-  db.driver.create(req.body).then((createddriver) => {
+  db.Driver.create(req.body).then((createddriver) => {
     if (!createddriver) {
       res.status(404).json({ message: "Cannot create driver" });
     } else {
@@ -21,7 +21,7 @@ const createDriver = (req, res) => {
 };
 
 const updatedDriver = (req, res) => {
-  db.driver.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
+  db.Driver.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
     (updateddriver) => {
       if (!updateddriver) {
         res.status(404).json({ message: "Cannot create driver" });
@@ -33,7 +33,7 @@ const updatedDriver = (req, res) => {
 };
 
 const deletedDriver = (req, res) => {
-  db.driver.findByIdAndDelete(req.params.id).then((deleteddriver) => {
+  db.Driver.findByIdAndDelete(req.params.id).then((deleteddriver) => {
     if (!deleteddriver) {
       res.status(404).json({ message: "Cannot create driver" });
     } else {

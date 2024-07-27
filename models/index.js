@@ -14,5 +14,5 @@ connectToMongo();
 
 module.exports = {
   Team: require("./Team"),
-  Player: require("./Driver"),
+  Driver: require("./Driver"),
 };
