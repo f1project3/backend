@@ -27,8 +27,7 @@ const getTeamDrivers = (req, res) => {
         res.status(404).json({ message: "Cannot find People" });
       } else {
         //return
-        res.status(200).json({ data: filteredData });
-        console.log(filteredData)
+        res.status(200).json({ data: filteredData});
       }
     })
     //error

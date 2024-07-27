@@ -15,5 +15,4 @@ connectToMongo();
 module.exports = {
   Team: require("./Team"),
   Player: require("./Player"),
-  Stats: require("./Stats"),
 };
