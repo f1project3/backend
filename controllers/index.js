@@ -1,4 +1,4 @@
 module.exports = {
   teamCtrl: require("./teamCtrls"),
-  playerCtrl: require("./playerCtrls"),
+  driverCtrl: require("./driverCtrls"),
 };
