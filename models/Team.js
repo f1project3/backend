@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 //models
 const TeamSchema = new mongoose.Schema({
-  name: String,
-  logo: String,
-  history: String,
+  team_name: String
 });
 
 const Team = mongoose.model("Team", TeamSchema);

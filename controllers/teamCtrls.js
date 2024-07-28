@@ -24,7 +24,7 @@ const getTeamDrivers = (req, res) => {
       );
       //if cannot find anything in database
       if (!allDrivers) {
-        res.status(404).json({ message: "Cannot find People" });
+        res.status(404).json({ message: "Cannot find Drivers" });
       } else {
         //return
         res.status(200).json({ data: filteredData});
