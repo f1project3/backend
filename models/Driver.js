@@ -14,6 +14,7 @@ const DriverSchema = new mongoose.Schema({
   country_code: String,
   session_key: Number,
   meeting_key: Number,
+  /* isFantasy: Boolean  */
 });
 
 const Driver = mongoose.model("drivers", DriverSchema);

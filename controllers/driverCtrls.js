@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const db = require("../models");
 
 const getDriver = (req, res) => {
@@ -15,9 +16,32 @@ const createDriver = (req, res) => {
     if (!createDriver) {
       res.status(404).json({ message: "Cannot create driver" });
     } else {
-      res.status(200).json({ data: createDriver ,  message: "Created Driver"});
+      res.status(200).json({ data: createDriver, message: "Created Driver" });
     }
   });
+};
+
+const createMultipleDrivers = async (team_name,driversArray) => {
+  try {
+
+    if (!Array.isArray(driversArray)) {
+      throw new Error('driversArray must be an array');
+    }
+
+    // Assign new unique ObjectIDs to each driver
+    const driversWithNewIds = driversArray.map(driver => ({
+      ...driver, // leaving all the other data unchanged, only changing values below
+      _id: new mongoose.Types.ObjectId(),
+      team_name
+    }));
+    // Uploading multiple objects at once
+    const createdDrivers = await db.Driver.insertMany(driversWithNewIds);
+    return createdDrivers;
+  } catch (error) {
+    console.error("Error in createMultipleDrivers:", error.message); // Log error message
+
+    throw error;
+  }
 };
 
 const updateDriver = (req, res) => {
@@ -26,7 +50,7 @@ const updateDriver = (req, res) => {
       if (!updateDriver) {
         res.status(404).json({ message: "Cannot create driver" });
       } else {
-        res.status(200).json({ data: updateDriver,  message: "Updated Driver" });
+        res.status(200).json({ data: updateDriver, message: "Updated Driver" });
       }
     }
   );
@@ -37,13 +61,15 @@ const deletedDriver = (req, res) => {
     if (!deleteDriver) {
       res.status(404).json({ message: "Cannot create driver" });
     } else {
-      res.status(200).json({ data: deleteDriver,  message: "Deleted Driver" });
+      res.status(200).json({ data: deleteDriver, message: "Deleted Driver" });
     }
   });
 };
+
 module.exports = {
   getDriver,
   createDriver,
+  createMultipleDrivers,
   updateDriver,
   deletedDriver,
 };
