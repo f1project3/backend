@@ -9,7 +9,7 @@ F1 App - Backend is one half of the F1 application designed to allow F1 fans to 
 * [Technologies Used](#technologiesused)
 * [Features](#features)
 * [Installation Instructions/Getting Started](#installation-instructionsgetting-started)
-* [Deployed App](#deployment)
+* [Deployed Backend](#deployedbackend)
 
 ## <a name="technologiesused"></a>TECHNOLOGIES USED: 
 * HTML5 
