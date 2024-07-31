@@ -8,6 +8,7 @@ F1 App - Backend is one half of the F1 application designed to allow F1 fans to 
 ## TABLE OF CONTENTS
 * [Technologies Used](#technologiesused)
 * [Features](#features)
+* [Project Management](#projectmanagement)
 * [Installation Instructions/Getting Started](#installation-instructionsgetting-started)
 * [Deployed Backend](#deployedbackend)
 
@@ -20,6 +21,8 @@ F1 App - Backend is one half of the F1 application designed to allow F1 fans to 
 
 ## <a name="features"></a>FEATURES
 * Users can create, read, update, or destroy items from the working JSON API 
+
+
 
 ## <a name="installationinstructions/gettingstarted"></a>INSTALLATION INSTRUCTIONS/GETTING STARTED
 * Fork the Backend Repository 
@@ -61,4 +64,4 @@ F1 App - Backend is one half of the F1 application designed to allow F1 fans to 
  ![Backend Nodemon Working](./public/imgs/backend_nodemon.png)
 
 ## <a name="deployedbackend"></a>DEPLOYED BACKEND
-The Backend of the F1 App can be accessed via this link: [mongodb+srv://abshir-ali:November91@atlascluster.hskovlv.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster](mongodb+srv://abshir-ali:November91@atlascluster.hskovlv.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster)
+The Backend of the F1 App can be accessed via this link: [https://backend-esrb.onrender.com](https://backend-esrb.onrender.com)
